@@ -7,7 +7,10 @@ and to prepare job applications.
 ## Where things live
 - `content/profile.ts` holds all CV and portfolio content: profile, education, experience, skills, languages
   and projects. Edit only this file for content changes. Both pages read it.
-- `app/page.tsx` is the portfolio (neon look, from the Gitfolio template). `app/cv/page.tsx` is the light, print-friendly CV.
+- `app/page.tsx` is the portfolio. `app/Room.tsx` is the hero: a 3D room whose viewpoint follows the pointer,
+  echoing P707's head-coupled perspective. `app/cv/page.tsx` is the light, print-friendly CV.
+- Design rules: the colour tokens in `app/globals.css` (verdigris on plaster), one typeface (Schibsted Grotesk),
+  sentence case, no ALL-CAPS labels, no card grids. Keep the room the only bold element.
 - `applications/` is git-ignored. Tailored CVs, cover letters and job-ad notes go here and are never committed.
 
 ## Local source material (read for facts, never copy wholesale)

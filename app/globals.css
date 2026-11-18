@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Palette: Copenhagen verdigris copper roofs over plaster. */
+@theme {
+  --color-plaster: #eef1ef;
+  --color-ink: #22323a;
+  --color-verdigris: #276b5e;
+  --color-patina: #cfe0da;
+  --color-grid: #a9bdb8;
+  --color-muted: #4e6068;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-schibsted);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-plaster);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-verdigris);
+  outline-offset: 3px;
+}
+
+/* Hero room: a box seen through the screen; Room.tsx moves the viewpoint via --px/--py. */
+.room {
+  --depth: 420px;
+  position: relative;
+  height: clamp(340px, 60vh, 620px);
+  perspective: 700px;
+  perspective-origin: var(--px, 50%) var(--py, 45%);
+  overflow: hidden;
+  background: var(--color-plaster);
+}
+.room-space {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.room-face {
+  position: absolute;
+  background-color: var(--face);
+  background-image:
+    linear-gradient(var(--color-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.room-floor   { --face: var(--color-patina); left: 0; bottom: 0; width: 100%; height: var(--depth); transform-origin: bottom; transform: rotateX(90deg); }
+.room-ceiling { --face: #f6f8f7; left: 0; top: 0; width: 100%; height: var(--depth); transform-origin: top; transform: rotateX(-90deg); }
+.room-left    { --face: #e1e8e5; left: 0; top: 0; width: var(--depth); height: 100%; transform-origin: left; transform: rotateY(90deg); }
+.room-right   { --face: #e1e8e5; right: 0; top: 0; width: var(--depth); height: 100%; transform-origin: right; transform: rotateY(-90deg); }
+.room-back {
+  --face: var(--color-plaster);
+  inset: 0;
+  transform: translateZ(calc(var(--depth) * -1));
+  display: flex;
+  align-items: flex-end;
+  padding: 6%;
+}
+.room-name {
+  /* rendered at ~0.62x because the back wall sits at depth */
+  font-size: clamp(4.5rem, 16vw, 13rem);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+  color: var(--color-ink);
 }

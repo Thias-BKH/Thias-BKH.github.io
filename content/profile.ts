@@ -59,12 +59,11 @@ export const profile = {
   projects: [
     {
       title: "Rådhuspladsen Through Time",
-      role: "Team project (7), MSc Medialogy — NPCs, audio, flags, environment",
+      role: "Team of 7, MSc Medialogy. My part: NPCs, audio, flags, environment",
       year: "2026",
       description:
         "Immersive installation showing Copenhagen's City Hall Square across history. An Azure Kinect tracks the visitor's head and an off-axis projection turns the screen into a window. I built the 1645 street life: root-motion NPC walkers, Wwise footstep and ambience audio, GPU-waving flags, atmosphere and modelled props.",
-      tags: ["UNITY", "C#", "WWISE", "KINECT"],
-      color: "cyan",
+      tags: ["Unity", "C#", "Wwise", "Azure Kinect"],
       href: "https://github.com/Bob-Ross-Codes/P707---Main-Project",
     },
     {
@@ -73,8 +72,7 @@ export const profile = {
       year: "2026",
       description:
         "macOS menu-bar app for the 20-20-20 eye-strain rule. On-device Vision face pose counts only the time you actually look at the screen (nothing recorded), then shows a full-screen break overlay.",
-      tags: ["SWIFT", "SWIFTUI", "VISION", "MACOS"],
-      color: "fuchsia",
+      tags: ["Swift", "SwiftUI", "Vision", "macOS"],
       href: "https://github.com/Thias-BKH/eyeRest",
     },
     {
@@ -83,8 +81,7 @@ export const profile = {
       year: "",
       description:
         "Wearable that translates ultrasonic sensor input into spatial haptic and auditory feedback. Featured on the ITU AIR Lab website.",
-      tags: ["C++", "ARDUINO", "HAPTICS"],
-      color: "purple",
+      tags: ["C++", "Arduino", "Haptics"],
       href: "",
     },
     {
@@ -93,8 +90,7 @@ export const profile = {
       year: "",
       description:
         "Interactive waste-sorting bin with sensing and embedded logic, and a proposed network of bins reporting fill levels over MQTT to optimise collection routes.",
-      tags: ["ESP32", "MQTT", "IOT"],
-      color: "yellow",
+      tags: ["ESP32", "MQTT", "IoT"],
       href: "",
     },
   ],
