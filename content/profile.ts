@@ -75,7 +75,7 @@ export const profile = {
         "macOS menu-bar app for the 20-20-20 eye-strain rule. On-device Vision face pose counts only the time you actually look at the screen (nothing recorded), then shows a full-screen break overlay.",
       tags: ["SWIFT", "SWIFTUI", "VISION", "MACOS"],
       color: "fuchsia",
-      href: "",
+      href: "https://github.com/Thias-BKH/eyeRest",
     },
     {
       title: "Sixth Sense Belt",

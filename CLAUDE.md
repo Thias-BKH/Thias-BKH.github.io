@@ -15,7 +15,7 @@ and to prepare job applications.
 - Project folders:
   - P707 Rådhuspladsen installation: `~/Desktop/P707---Main-Project` (team repo `Bob-Ross-Codes/P707---Main-Project`).
     Thias's part is NPCs, Wwise audio, flags, the 1645 atmosphere and modelling.
-  - eyeRest (Swift macOS app): `~/Documents/Codex/2026-07-27/eyeRest`. It is not on GitHub yet.
+  - eyeRest (Swift macOS app): `~/Documents/Codex/2026-07-27/eyeRest`, at https://github.com/Thias-BKH/eyeRest.
   - Sixth Sense Belt: `~/Desktop/2025/Job/Portfolio/The Sixth Sense Belt – AIRLab.pdf`.
   - Smart Waste (Smart skrald): `~/Documents/Arduino/SMARTSKRALD*` and `~/Desktop/2025/Forrige semestre/Smart skrald`.
 - Candidates not shown yet:
