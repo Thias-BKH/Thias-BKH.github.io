@@ -8,6 +8,7 @@ export const profile = {
   location: "Albertslund, Denmark",
   links: {
     github: "https://github.com/Thias-BKH",
+    linkedin: "https://www.linkedin.com/in/thias-kochen/",
   },
   summary:
     "MSc Medialogy student at Aalborg University Copenhagen with a BSc in Digital Design & Interactive Technologies from ITU. I work with interactive systems, physical computing and user-centred technology development — from embedded prototypes to immersive, sensor-driven installations.",
@@ -16,7 +17,7 @@ export const profile = {
     {
       degree: "MSc Medialogy",
       school: "Aalborg University Copenhagen",
-      period: "2026–present",
+      period: "2026–2028 (expected)",
       details: [] as string[],
     },
     {
@@ -38,11 +39,18 @@ export const profile = {
 
   experience: [
     {
-      role: "Digital Designer",
-      org: "",
-      period: "",
+      role: "Student Assistant, Staging & Tech Operations",
+      org: "Fiftytwo A/S, Glostrup",
+      period: "Apr 2026–present",
       description:
-        "Digital design and rebranding across platforms: modular design systems and interactive assets in Figma and Adobe. Collaborated with strategists and developers to turn concepts into structured, implementable solutions with a focus on user experience and system coherence.",
+        "Part of a three-person team preparing point-of-sale systems for some of Denmark's largest retail chains. I unpack and stage POS terminals, install and configure software, test the complete setup before customer delivery, and document configurations for quality assurance.",
+    },
+    {
+      role: "Junior Designer",
+      org: "Globant GUT / Vertic (contract, hybrid)",
+      period: "Sep 2022–Mar 2026",
+      description:
+        "Creative marketing and digital rebranding across platforms: visual concepts, modular design systems and interactive assets in Figma and Adobe. Worked with strategists and developers to turn concepts into structured, implementable solutions with a focus on user experience and system coherence.",
     },
   ],
 

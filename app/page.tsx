@@ -78,6 +78,17 @@ export default function Home() {
           <div className="md:col-span-8 space-y-10 max-w-[65ch]">
             <p className="leading-relaxed">{profile.summary}</p>
             <div>
+              <h3 className="font-bold">Experience</h3>
+              <ul className="mt-3 space-y-5">
+                {profile.experience.map((x) => (
+                  <li key={x.role}>
+                    <p>{x.role}, {x.org} <span className="text-muted whitespace-nowrap">{x.period}</span></p>
+                    <p className="mt-1 text-muted leading-relaxed">{x.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
               <h3 className="font-bold">Education</h3>
               <ul className="mt-3 space-y-2">
                 {profile.education.map((e) => (
@@ -113,6 +124,7 @@ export default function Home() {
           </p>
           <ul className="mt-6 flex gap-6">
             <li><a href={profile.links.github} className={link}>GitHub</a></li>
+            <li><a href={profile.links.linkedin} className={link}>LinkedIn</a></li>
             <li><a href="/cv" className={link}>Read my CV</a></li>
           </ul>
         </section>

@@ -21,6 +21,8 @@ export default function CV() {
             <a href={`mailto:${profile.email}`} className="hover:underline">{profile.email}</a>
             {" • "}{profile.location}{" • "}
             <a href={profile.links.github} className="hover:underline">{profile.links.github.replace("https://", "")}</a>
+            {" • "}
+            <a href={profile.links.linkedin} className="hover:underline">{profile.links.linkedin.replace("https://www.", "").replace(/\/$/, "")}</a>
           </p>
         </header>
 
@@ -28,18 +30,18 @@ export default function CV() {
           <p>{profile.summary}</p>
         </Section>
 
-        <Section title="Education">
-          {profile.education.map((e) => (
-            <Entry key={e.degree} heading={e.degree} sub={e.school} period={e.period}>
-              {e.details.map((d) => <p key={d}>{d}</p>)}
-            </Entry>
-          ))}
-        </Section>
-
         <Section title="Experience">
           {profile.experience.map((x) => (
             <Entry key={x.role} heading={x.role} sub={x.org} period={x.period}>
               <p>{x.description}</p>
+            </Entry>
+          ))}
+        </Section>
+
+        <Section title="Education">
+          {profile.education.map((e) => (
+            <Entry key={e.degree} heading={e.degree} sub={e.school} period={e.period}>
+              {e.details.map((d) => <p key={d}>{d}</p>)}
             </Entry>
           ))}
         </Section>
